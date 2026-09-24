@@ -1,0 +1,130 @@
+<%# Main contact section  %>
+<section class="page-header">
+    <div class="container">
+        <span class="section-label">Let's Connect</span>
+        <hr class="section-divider" />
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <%# Contact info, takes the left half of the page %>
+            <div class="col-lg-6">
+                <h5 class="fw-semibold text-white mb-3">Contact me</h5>
+                <p class="text-secondary small mb-4 lh-lg">
+                    I'm open to data engineering roles, analytics work, and interesting
+                    collaborations. Feel free to reach out through the form or directly
+                    via the links below.
+                </p>
+
+                <div class="d-flex flex-column gap-4">
+                    <%# Copy for each contact method %>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="small text-secondary mb-1">Email</div>
+                            <a href="mailto:htnguyen.0610@gmail.com" class="css-text-sm">
+                                htnguyen.0610@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="small text-secondary mb-1">Phone</div>
+                            <span class="css-text-sm">035-459-0536</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <div class="small text-secondary mb-1">LinkedIn</div>
+                            <a href="https://www.linkedin.com/in/hang-t-nguyen98/" target="_blank" rel="noopener"
+                                class="css-text-sm">
+                                linkedin.com/in/hang-t-nguyen98
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <div class="small text-secondary mb-1">GitHub</div>
+                            <a href="https://www.github.com/hang-nguyen98" target="_blank" rel="noopener"
+                                class="css-text-sm">
+                                github.com/hang-nguyen98
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <%# Contact form, takes the right half of the page %>
+            <div class="col-lg-6">
+                <div class="card card-dark border-0 p-4">
+
+                    <!-- Bootstrap alert, hidden until submit -->
+                    <!-- Custom class for alert -->
+                    <div class="alert custom-alert d-none" id="successAlert" role="alert">
+                        <i class="fa-solid fa-circle-check text-accent"></i>
+                        <span class="small">
+                            <strong class="text-accent">Message sent!</strong>
+                            Thanks for reaching out — I'll get back to you soon.
+                        </span>
+                        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- Contact form that sends messages via Formspree -->
+                    <form id="contactForm" action="https://formspree.io/f/xkoyyyjn" method="POST" novalidate>
+                        <div class="row g-3 mb-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label contact-label">First Name</label>
+                                <input type="text" class="form-control contact-input" id="firstName"
+                                    name="firstName" placeholder="Jane" required />
+                                <div class="invalid-feedback small">Please enter your first name.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label contact-label">Last Name</label>
+                                <input type="text" class="form-control contact-input" id="lastName" name="lastName"
+                                    placeholder="Doe" required />
+                                <div class="invalid-feedback small">Please enter your last name.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label contact-label">Email</label>
+                            <input type="email" class="form-control contact-input" id="email" name="email"
+                                placeholder="jane@example.com" required />
+                            <div class="invalid-feedback small">Please enter a valid email.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label contact-label">Subject</label>
+                            <input type="text" class="form-control contact-input" id="subject" name="subject"
+                                required placeholder="Opportunity / Collaboration / Hello" />
+                            <div class="invalid-feedback small">Please enter a valid subject.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label contact-label">Message</label>
+                            <textarea class="form-control contact-input" id="message" name="message" rows="5"
+                                placeholder="Write your message here…" required></textarea>
+                            <div class="invalid-feedback small">Please write a message.</div>
+                        </div>
+
+                        <button type="submit" class="btn-accent w-100 justify-content-center">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

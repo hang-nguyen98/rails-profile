@@ -1,0 +1,41 @@
+<!-- Hero / Introduction -->
+<section class="hero-section">
+    <div class="container">
+
+        <div class="row align-items-center">
+            <!-- Responsiveness for Introduction -->
+            <!-- Takes up 7/12 on large screens, full width on smaller screens -->
+            <div class="col-lg-7">
+                <p class="hero-eyebrow">Hi, I'm</p>
+
+                <p class="hero-title">Hang Nguyen</p>
+                <!-- <h1 class="hero-title">Hang Nguyen</h1> -->
+                <p class="hero-subtitle">
+                    Data Engineer with a background in analytics and cloud infrastructure.
+                    I build pipelines that turn raw data into useful insights.
+                </p>
+                <!-- Custom CSS class and Margin for View Projects and About Me buttons -->
+                <a href="<%= portfolio_path %>" class="btn-outline-accent me-2">
+                    <i class="fa-solid fa-folder-open"></i>
+                    View Projects
+                </a>
+                <a href="<%= experience_path %>" class="btn-outline-accent">
+                    <i class="fa-solid fa-briefcase"></i>
+                    View Experience
+                </a>
+            </div>
+            <!-- Responsiveness and margins for Avatar image
+                On large screens, takes up 5/12 and is aligned to the right of the introduction text
+                On smaller screens, takes up full width and is stacked below the introduction text -->
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                <div class="hero-avatar mx-auto">
+                    <!-- Uncomment to use fontawesome icon instead of a profile pic -->
+                    <!-- <i class="fa-solid fa-user"></i> -->
+                    <%= image_tag "profile.png", alt: "Profile picture" %>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
